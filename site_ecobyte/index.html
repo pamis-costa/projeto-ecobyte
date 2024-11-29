@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body id="top">
+    <header>
+        <img src="/imagem/logo.png" alt="Logo do Projeto Ecobyte" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#quemsomos">Quem Somos</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="imagem-estudantes">
+            <img src="/imagem/estudantes.jpg" alt="Estudantes" height="700" width="850">
+            <h1 class="texto">ECOBYTE</h1>
+            <h2 class="subtexto">TECNOLOGIA E RECICLAGEM</h2>
+        </section>
+        <section id="galeria" class="gallery-title">
+            <h1>GALERIA</h1>
+            <div class="gallery2">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel">
+                    <img class="slide" src="/imagem/estudantes.jpg" alt="Imagem 1" onclick="openModal(this)" />
+                    <img class="slide" src="/imagem/embreve.png" alt="Imagem 2" onclick="openModal(this)" />
+                    <img class="slide" src="/imagem/embreve1.png" alt="Imagem 3" onclick="openModal(this)" />
+                    <img class="slide" src="/imagem/embreve2.png" alt="Imagem 4" onclick="openModal(this)" />
+                </div>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+        
+        <!-- Modal de Imagem -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage" />
+        </div>
+        
+
+        <section id="quemsomos">
+            <h1>QUEM SOMOS</h1>
+            <div class="quemsomos">
+                <img src="/imagem/estudantes.jpg" alt="Imagem estudantes" height="400" width="500">
+                <p>O Ecobyte é um projeto desenvolvido pelos alunos da EETEPA Vilhena Alves, do curso de Informática
+                    Subsequente, na disciplina de TI Verde Sustentabilidade e Clima. O objetivo principal do projeto é
+                    unir conhecimentos tecnológicos com práticas de sustentabilidade e conscientização sobre o impacto do
+                    clima e meio ambiente. Buscamos promover um uso mais eficiente da tecnologia, levando em conta os desafios ambientais e as soluções que podem ser alcançadas através da inovação digital.</p>
+                <p>Através deste projeto, queremos destacar a importância de tecnologias acessíveis e sustentáveis, além
+                    de incentivar práticas que ajudem a preservar o nosso planeta para as futuras gerações. Como alunos de
+                    informática, estamos comprometidos em criar soluções que contribuam para um mundo mais sustentável
+                    utilizando a tecnologia de forma responsável e inovadora.</p>
+                <img src="/imagem/logo.png" alt="Imagem da logo Ecobyte" height="400" width="500">
+                <p>Acima, temos a logo do Ecobyte, que foi cuidadosamente desenvolvida pelos alunos de informática,
+                    simbolizando o compromisso com a sustentabilidade e a inovação tecnológica. O design da logo reflete
+                    os valores do nosso projeto, onde a tecnologia e o meio ambiente caminham lado a lado.</p>
+            </div>
+        </section>
+        <section id="projetos" class="content">
+            <h1>PROJETOS</h1>
+            <div class="gallery">
+                <a href="projeto.html">
+                    <img src="/imagem/embreve.png" alt="Imagem projeto 1" height="200" width="300" />
+                </a>
+                <a href="projeto.html">
+                    <img src="/imagem/embreve.png" alt="Imagem projeto 2" height="200" width="300" />
+                </a>
+                <a href="projeto.html">
+                    <img src="/imagem/embreve.png" alt="Imagem projeto 3" height="200" width="300" />
+                </a>
+                <a href="projeto.html">
+                    <img src="/imagem/embreve.png" alt="Imagem projeto 4" height="200" width="300" />
+                </a>
+                <a href="projeto.html">
+                    <img src="/imagem/embreve.png" alt="Imagem projeto 5" height="200" width="300" />
+                </a>
+                <a href="projeto.html">
+                    <img src="/imagem/embreve.png" alt="Imagem projeto 6" height="200" width="300" />
+                </a>
+                <a href="projeto.html">
+                    <img src="/imagem/embreve.png" alt="Imagem projeto 7" height="200" width="300" />
+                </a>
+                <a href="projeto.html">
+                    <img src="/imagem/embreve.png" alt="Imagem projeto 8" height="200" width="300" />
+                </a>
+                <a href="projeto.html">
+                    <img src="/imagem/embreve.png" alt="Imagem projeto 9" height="200" width="300" />
+                </a>
+                <a href="projeto.html">
+                    <img src="/imagem/embreve.png" alt="Imagem projeto 10" height="200" width="300" />
+                </a>
+                <a href="projeto.html">
+                    <img src="/imagem/embreve.png" alt="Imagem projeto 11" height="200" width="300" />
+                </a>
+                <a href="projeto.html">
+                    <img src="/imagem/embreve.png" alt="Imagem projeto 12" height="200" width="300" />
+                </a>
+            </div>
+        </section>
+        
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 ECOBYTE. Todos os direitos reservados.</p>
+            <p>Telefone: (91) 1234-5678 | E-mail: contato@ecobyte.com</p>
+        </div>
+    </footer>
+
+    <!-- Seta de Voltar ao Topo -->
+    <a href="#top" class="back-to-top">
+        ↑
+    </a>
+
+
+</body>
+
+</html>
