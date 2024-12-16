@@ -35,6 +35,7 @@ function openModal(imgElement) {
 
     modal.style.display = "flex";  // Exibe o modal
     modalImg.src = imgElement.src;  // Define a imagem no modal como a clicada
+    
 }
 
 // Função para fechar o modal
