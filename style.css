@@ -420,3 +420,55 @@ html {
     text-align: center;
     width: 500px;
 }
+
+
+/* Jogos*/
+#jogos {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.jogos-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.jogos-descricao {
+    max-width: 50%;
+    text-align: left;
+}
+
+.jogos-descricao h2 {
+    font-size: 1.8em;
+    color: #52fa05;
+}
+
+.jogos-descricao p {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.btn-jogar {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00BF00;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-jogar:hover {
+    background-color: #45a049;
+}
+
+.jogos-qr img {
+    border: 2px solid #00BF00;
+    border-radius: 10px;
+}
