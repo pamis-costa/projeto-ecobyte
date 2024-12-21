@@ -1,48 +1,58 @@
-let slideIndex = 0;
+// Configuração do Swiper
+var swiper = new Swiper(".carousel", {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
-// Função para mover o slide
-function moveSlide(n) {
-    let slides = document.querySelectorAll('.carousel img');
-    slideIndex += n;
+// Função para abrir o modal
+function openModal(imageSrc) {
+  var modal = document.getElementById("imageModal");
+  var modalImage = document.getElementById("modalImage");
+  modal.style.display = "block";
+  modalImage.src = imageSrc;
 
-    // Verifica se o índice está fora dos limites e ajusta
-    if (slideIndex >= slides.length) {
-        slideIndex = 0;
-    }
-    if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
-    }
-
-    // Esconde todas as imagens e exibe a imagem ativa
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex].style.display = "block";
-}
-
-// Inicializa o carrossel
-function startCarousel() {
-    let slides = document.querySelectorAll('.carousel img');
-    if (slides.length > 0) {
-        slides[0].style.display = "block"; // Exibe a primeira imagem
-    }
-}
-
-// Função para abrir o modal com a imagem clicada
-function openModal(imgElement) {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImage");
-
-    modal.style.display = "flex";  // Exibe o modal
-    modalImg.src = imgElement.src;  // Define a imagem no modal como a clicada
-    
+  // Pausa o autoplay do Swiper
+  swiper.autoplay.stop();
 }
 
 // Função para fechar o modal
 function closeModal() {
-    const modal = document.getElementById("imageModal");
-    modal.style.display = "none";  // Esconde o modal
+  var modal = document.getElementById("imageModal");
+  modal.style.display = "none";
+
+  // Reinicia o autoplay do Swiper
+  swiper.autoplay.start();
 }
 
-// Chama a função para iniciar o carrossel ao carregar a página
-window.onload = startCarousel;
+// Adiciona evento de clique nas imagens do carrossel
+var slides = document.querySelectorAll(".swiper-slide img");
+slides.forEach(function (img) {
+  img.addEventListener("click", function () {
+    openModal(this.src);
+  });
+});
+
+// Adiciona evento de clique no botão de fechar do modal
+var closeButton = document.querySelector(".close");
+closeButton.addEventListener("click", closeModal);
+
+// Fecha o modal se o usuário clicar fora da imagem
+var modal = document.getElementById("imageModal");
+modal.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    closeModal();
+  }
+});

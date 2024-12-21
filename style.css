@@ -1,4 +1,4 @@
-*{
+* {
     background-color: black;
     margin: 0;
     padding: 0;
@@ -7,28 +7,29 @@
 }
 
 header {
-    text-align: center; /* Centraliza tudo dentro do header */
-    margin: 20px 0; /* Adiciona espaçamento ao redor */
+    text-align: center;
+    margin: 20px 0;
 }
 
 .logo {
     display: block;
     margin: 20px auto;
-    max-width: 200px; 
-    height: auto; 
+    max-width: 100px;
+    height: auto;
 }
-nav{
+
+nav {
     border-bottom: 1px solid green;
 }
 
 nav ul {
-    list-style: none; 
+    list-style: none;
     padding: 0;
     margin: 10px 0;
     display: flex;
     justify-content: center;
     gap: 80px;
-    
+
 }
 
 nav ul li a {
@@ -37,19 +38,19 @@ nav ul li a {
     font-size: 20px;
     font-weight: bold;
     transition: color 0.3s ease;
-    
+
 }
 
 nav ul li a:hover {
     color: green;
 }
 
-main{
+main {
     color: #ffffff;
     text-align: center;
 }
 
-h1{
+h1 {
     font-size: 50px;
 }
 
@@ -58,6 +59,7 @@ h1{
     position: relative;
     margin: 50px 0;
 }
+
 .imagem-estudantes img {
     opacity: 0.6;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -67,6 +69,7 @@ h1{
     opacity: 0.9;
     transform: scale(1.1);
 }
+
 .texto {
     position: absolute;
     top: 40%;
@@ -92,146 +95,105 @@ h1{
 }
 
 /*Galeria*/
-.gallery-title {
-    margin: 20px 0;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 80px;
-}
-.gallery2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-}
-.gallery2 img {
-    width: 400px;
-    height: 300px;
-    margin: 0 10px;
-}
-
-/*carrosel*/
-.gallery2 {
+.carousel-container {
     position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.carousel {
     display: flex;
-    transition: transform 0.5s ease;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    margin: 0 auto;
 }
 
-.carousel img {
-    max-width: 100%;
-    display: none; 
+.swiper {
+    width: 100%;
     height: auto;
+
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    border-radius: 50%;
+    border-color: transparent;
+    width: 50px; /* Tamanho do botão */
+    height: 50px;
+    transition: all 0.3s ease-in-out; /* Animação ao interagir */
+    position: absolute; /* Permite posicionamento fora do carrossel */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta a centralização */
+    z-index: 10; /* Certifica-se de que os botões estão acima do carrossel */
 }
 
-button {
-  padding: 16px 35px;
-  border-radius: 50px;
-  box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.5);
-  line-height: 1.25;
-  background:#00BF00;
-  text-decoration: none;
-  user-select: none;
-  color: white;
-  font-size: 16px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  position: relative;
-  transition: background-color .6s ease;
-  overflow: hidden;
-  cursor: pointer;
+.swiper-button-prev {
+    left: -10px; /* Posiciona à esquerda do carrossel */
 }
 
-/* Efeito do mouse */
-button:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 100%;
-  transition: width .3s ease, height .3s ease;
+.swiper-button-next {
+    right: -10px; /* Posiciona à direita do carrossel */
 }
 
-/* Efeito de hover e foco */
-button:hover,
-button:focus {
-  background: #4aa34a; /* Cor mais escura para hover */
+.swiper-pagination {
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+    background-color: transparent;
+
 }
 
-/* Efeito quando o botão é pressionado */
-button:active {
-  background: #4aa34a;
+.swiper-pagination-bullet {
+    color: #020202;
 }
 
-button:active:after {
-  width: 300px;
-  height: 300px;
-}
-
-/* Posicionamento dos botões prev e next */
-button.prev {
-  left: -50px;
-  transform: translateY(-50%);
-}
-
-button.next {
-  right: -50px;
-  transform: translateY(-50%);
-}
-
-
-/* Estilos do Modal */
+/* Estilos do modal */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
     overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
-    max-width: 90%; 
-    max-height: 90%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     margin: auto;
     display: block;
     object-fit: contain;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .close {
     position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
+    top: 20px;
+    right: 30px;
+    color: white;
+    background-color: transparent;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 /*Quem Somos*/
 section {
-    text-align: center; 
+    text-align: center;
     margin: 20px auto;
     margin-bottom: 80px;
 }
@@ -243,8 +205,8 @@ section h1 {
 
 section .quemsomos {
     max-width: 800px;
-    margin: 0 auto; 
-    text-align: justify; 
+    margin: 0 auto;
+    text-align: justify;
 }
 
 section .quemsomos img {
@@ -256,9 +218,9 @@ section .quemsomos img {
 
 section .quemsomos p {
     margin: 20px 0;
-    line-height: 1.6; 
-    color: #ffffff; 
-    font-size: 20px; 
+    line-height: 1.6;
+    color: #ffffff;
+    font-size: 20px;
 }
 
 /*Projetos*/
@@ -266,16 +228,19 @@ section .quemsomos p {
 .content {
     margin-top: 20px;
 }
+
 .content h1 {
     font-size: 50px;
     margin-bottom: 40px;
 }
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
+
 .gallery img {
     width: 300px;
     height: 200px;
@@ -289,7 +254,7 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    font-size: 14px; 
+    font-size: 14px;
     position: relative;
 }
 
@@ -366,10 +331,11 @@ html {
     transform: translateY(-3px);
     /* Ajustando a posição da seta */
 }
-  /* Efeito para quando o botão está visível */
-  .back-to-top.show {
+
+/* Efeito para quando o botão está visível */
+.back-to-top.show {
     display: block;
-  }
+}
 
 /*pagina-projeto*/
 .content-project {
@@ -394,8 +360,8 @@ html {
     width: 400px;
     height: auto;
     cursor: pointer;
-    
-    
+
+
 }
 
 .project-description {
@@ -403,7 +369,8 @@ html {
     text-align: center;
     color: #ffffff;
     border-left: 1px solid green;
-    height: 250px; /* Defini uma altura específica */
+    height: 250px;
+    /* Defini uma altura específica */
 }
 
 .project-description h2 {
@@ -411,7 +378,7 @@ html {
     margin-bottom: 10px;
     color: #ffffff;
     text-align: center;
-    
+
 }
 
 .project-description p {
