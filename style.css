@@ -247,8 +247,26 @@ section .quemsomos p {
     border-radius: 10px;
 }
 
-/* footer*/
+/*Aplicativos*/
+.logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+.logos img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
 
+.logos img:hover {
+  transform: scale(1.2);
+}
+
+/* footer*/
 footer {
     color: #fff;
     padding: 20px 0;
@@ -479,7 +497,9 @@ html {
     .quemsomos img {
         width: 80%;
         font-size: 5px;
+    
     }
+
     .quemsomos p {
         font-size: 15px;
         text-align: justify;
@@ -555,5 +575,12 @@ html {
 @media (max-width: 768px) {
     .back-to-top {
         display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .logos img {
+    width: 200px;
+    height: 200px;
     }
 }
