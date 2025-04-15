@@ -495,9 +495,8 @@ html {
         object-fit: cover;
     }
     .quemsomos img {
-        width: 80%;
+        padding: 4%;
         font-size: 5px;
-    
     }
 
     .quemsomos p {
@@ -532,8 +531,9 @@ html {
     }
 
     .jogos-descricao p {
-        font-size: 15px;
-        text-align: center;
+        font-size: 20px;
+        text-align: justify;
+        margin: 20px;
     }
 
     .btn-jogar {
@@ -582,5 +582,10 @@ html {
     .logos img {
     width: 200px;
     height: 200px;
+    padding: 4%;
+    transition: transform 0.3s ease;
+    }
+    .logos img:hover {
+    transform: scale(1.1);
     }
 }
