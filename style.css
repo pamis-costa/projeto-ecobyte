@@ -19,7 +19,7 @@ header {
 }
 
 nav {
-    border-bottom: 1px solid green;
+    border-bottom: 2px solid #008000;
 }
 
 nav ul {
@@ -121,27 +121,8 @@ h1 {
 .swiper-button-prev,
 .swiper-button-next {
     background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
-    border-radius: 50%;
     border-color: transparent;
-    width: 50px; /* Tamanho do botão */
-    height: 50px;
-    transition: all 0.3s ease-in-out; /* Animação ao interagir */
-    position: absolute; /* Permite posicionamento fora do carrossel */
-    top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-50%); /* Ajusta a centralização */
-    z-index: 10; /* Certifica-se de que os botões estão acima do carrossel */
-}
-
-.swiper-button-prev {
-    left: -10px; /* Posiciona à esquerda do carrossel */
-}
-
-.swiper-button-next {
-    right: -10px; /* Posiciona à direita do carrossel */
 }
 
 .swiper-pagination {
@@ -268,90 +249,84 @@ section .quemsomos p {
 
 /* footer*/
 footer {
-    color: #fff;
-    padding: 20px 0;
+    color: white;
     text-align: center;
+    padding: 20px 0;
+}
+
+footer hr {
+    border: none;
+    height: 2px;
+    background-color: #008000;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-container p {
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* Título do contato */
+.contact-title h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.social-links p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.social-links a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.footer-copyright p {
     font-size: 14px;
-    position: relative;
+    opacity: 0.8;
 }
 
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.footer-content p {
-    margin: 5px 0;
-}
-
-/*seta volta pro topo*/
-/* Estilo do botão Voltar ao Topo */
+ /* Botão Volta ao top*/
+html {
+    scroll-behavior: smooth;
+} 
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #00BF00;
-    color: white;
-    padding: 16px 25px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 24px;
-    cursor: pointer;
+    background: #000;
+    color: #fff;
+    padding: 10px 15px;
+    border: 2px solid #00800088;
+    border-radius: 50px;
     text-decoration: none;
-    box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.5);
-    transition: background-color .6s ease, transform .3s ease;
-    overflow: hidden;
-}
+    font-size: 25px;
+    display: block;
+    z-index: 1000;
+}  
 
-/* Efeito de mouse */
-.back-to-top:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 100%;
-    transition: width .3s ease, height .3s ease;
-}
-
-/* Efeito de hover */
 .back-to-top:hover {
-    background-color: #45a049;
-    transform: scale(1.1);
-    /* Efeito de aumento ao passar o mouse */
-}
-
-/* Efeito quando o botão é pressionado */
-.back-to-top:active {
-    background-color: #388E3C;
-    transform: scale(1);
-}
-
-.back-to-top:active:after {
-    width: 300px;
-    height: 300px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-/* Personalizando o ícone de setinha do botão */
-.back-to-top::before {
-    content: "";
-    /* Usando uma seta como conteúdo */
-    font-size: 50px;
-    display: block;
-    transform: translateY(-3px);
-    /* Ajustando a posição da seta */
-}
-
-/* Efeito para quando o botão está visível */
-.back-to-top.show {
-    display: block;
+    background: #008000;
 }
 
 /*pagina-projeto*/

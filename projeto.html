@@ -1,58 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Actor&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sevillana&display=swap" rel="stylesheet">    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Actor&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sevillana&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
     <title>Projetos</title>
-    
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <a href="index.html"><img src="/imagem/logo.png" alt="Logo do Projeto Ecobyte" class="logo">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="index.html">Galeria</a></li>
-                <li><a href="index.html">Quem Somos</a></li>
-                <li><a href="index.html">Projetos</a></li>
-            </ul>
-        </nav>
+      <a href="index.html">
+        <img
+          src="/logo_ecobyte.png"
+          alt="Logo do Projeto Ecobyte"
+          class="logo"
+        />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html">Galeria</a></li>
+          <li><a href="index.html">Quem Somos</a></li>
+          <li><a href="index.html">Projetos</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div class="content-project">
-            <h1>PROJETOS</h1>
-            <div class="project">
-                <a href="javascript:void(0);" onclick="openModal('/imagem/projetos/projeto1.jpeg')">
-                    <img src="/imagem/projetos/projeto1.jpeg" alt="Imagem projeto 1" height="200" width="300" />
-                </a>
-                <div class="project-description">
-                    <h2>NOME DO PROJETO</h2>
-                    <p>Descrição do projeto</p>
-                </div>
-            </div>
+      <div class="content-project">
+        <h1>PROJETOS</h1>
+        <div class="project">
+          <a
+            href="javascript:void(0);"
+            onclick="openModal('/imagem/projetos/projeto1.jpeg')"
+          >
+            <img
+              src="/imagem/projetos/projeto1.jpeg"
+              alt="Imagem projeto 1"
+              height="200"
+              width="300"
+            />
+          </a>
+          <div class="project-description">
+            <h2>NOME DO PROJETO</h2>
+            <p>Descrição do projeto</p>
+          </div>
         </div>
+      </div>
 
-          <!-- Modal para exibir a imagem em tamanho maior -->
-        <div id="imageModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="modalImage" />
-        </div>
-
+      <!-- Modal para exibir a imagem em tamanho maior -->
+      <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" />
+      </div>
     </main>
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 ECOBYTE. Todos os direitos reservados.</p>
-            <p>Telefone: (91) 1234-5678 | E-mail: contato@ecobyte.com</p>
+      <hr />
+      <div class="footer-container">
+        <!-- Título do Contato -->
+        <div class="contact-title">
+          <h2>Nosso Contato</h2>
         </div>
+        <div class="social-links">
+          <a href="https://mail.google.com/mail/u/0/?pli=1" target="_blank"
+            ><img
+              src="https://images.icon-icons.com/730/PNG/512/gmail_icon-icons.com_62758.png"
+              alt="Link do Gmail"
+          /></a>
+          <a href="https://web.whatsapp.com/" target="_blank"
+            ><img
+              src="https://images.icon-icons.com/2429/PNG/512/whatsapp_logo_icon_147205.png"
+              alt="Link do Whatsapp"
+          /></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img
+              src="https://images.icon-icons.com/1211/PNG/512/1491580635-yumminkysocialmedia26_83102.png"
+              alt="Link do Instagram"
+          /></a>
+          <a
+            href="https://www.linkedin.com/home?originalSubdomain=br"
+            target="_blank"
+            ><img
+              src="https://images.icon-icons.com/805/PNG/512/linkedin_icon-icons.com_65929.png"
+              alt="Link do linkedin"
+          /></a>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2024 ECOBYTE. Todos os direitos reservados.</p>
+        </div>
+      </div>
+      <hr />
     </footer>
-</body>
+  </body>
 </html>
